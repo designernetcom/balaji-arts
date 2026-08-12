@@ -2250,7 +2250,7 @@ Main Header One
 .main-header-one__bottom-right-btn a {
   position: relative;
   display: inline-block;
-  color: var(--thm-base);
+  color: #00378d;
   font-size: 19px !important;
   font-weight: 700;
   background: #fff;
@@ -14745,7 +14745,7 @@ End Css
 
 .logo-text h1 {
   margin: 0;
-  font-size: 27px;
+  font-size: 40px;
   font-weight: 700;
   color: #fff;
   line-height: 1.1;
@@ -15097,3 +15097,115 @@ End Css
 }
 
 
+.about-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: 5px solid blue;
+  border-radius: 10px;
+}
+
+
+
+.sticky-social {
+  position: fixed;
+  right: 0;
+  top: 65%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 21px;
+
+  border-radius: 20px;
+
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  width: 58px;
+  color: #fff;
+}
+
+/* WhatsApp */
+.whatsapp {
+  background: #25D366;
+}
+
+.whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* YouTube */
+.youtube {
+  background: #FF0000;
+}
+
+.youtube:hover {
+  background: #cc0000;
+}
+
+/* Instagram */
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #F58529,
+    #FEDA77,
+    #DD2A7B,
+    #8134AF,
+    #515BD4
+  );
+}
+
+.instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #d96d1f,
+    #e5c25c,
+    #c42369,
+    #702c99,
+    #4650bd
+  );
+}
+
+/* Facebook */
+.facebook {
+  background: #1877F2;
+}
+
+.facebook:hover {
+  background: #0d65d9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .social-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .social-icon:hover {
+    width: 48px;
+  }
+
+  .sticky-social {
+    gap: 3px;
+  }
+}
