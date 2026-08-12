@@ -18,11 +18,11 @@
 --------------------------------------------------------------*/
 :root {
   --thm-font: "Saira Semi Condensed", sans-serif;
-  --thm-gray: #878c8f;
+  --thm-gray: #414141;
   --thm-gray-rgb: 135, 140, 143;
-  --thm-base: #d4a017;
+  --thm-base: #f4ba00;
   --thm-base-rgb: 221, 4, 41;
-  --thm-black: #1a1a1a;
+  --thm-black: #0F1C2E;
   --thm-black-rgb: 26, 26, 26;
   /* --thm-base: linear-gradient(135deg, #000000, #171717, #c99700); */
 }
@@ -47,7 +47,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
-  font-family: var(--thm-font);
+  font-family: "Saira Semi Condensed", sans-serif;
 }
 
 body.locked {
@@ -92,7 +92,7 @@ h4,
 h5,
 h6 {
   color: var(--thm-black);
-  font-family: var(--thm-font);
+  font-family: "Saira Semi Condensed", sans-serif;
   margin: 0;
 }
 
@@ -274,7 +274,7 @@ li {
   font-size: 32px;
   line-height: 1.2em;
   font-weight: 700;
-  font-family: var(--thm-font);
+  font-family: "Saira Semi Condensed", sans-serif;
 }
 
 /***
@@ -324,7 +324,7 @@ li {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid var(--thm-base);
+  border: 2px solid #00378d;
   content: "";
   margin: 0 auto;
 }
@@ -335,13 +335,13 @@ li {
   right: -32px;
   width: 25px;
   height: 2px;
-  background: var(--thm-base);
+  background: #00378d;
   content: "";
 }
 
 .sec-title-two .sub-title h3 {
-  color: var(--thm-base);
-  font-size: 22px;
+  color: #00378d;
+  font-size: 16px;
   line-height: 32px;
   font-weight: 600;
   text-transform: capitalize;
@@ -349,12 +349,12 @@ li {
 
 .sec-title-two h2 {
   color: var(--thm-black);
-  font-size: 55px;
+  font-size: 40px;
   line-height: 1.2em;
   font-weight: 700;
   text-transform: capitalize;
   letter-spacing: -0.01em;
-  font-family: var(--thm-font);
+  font-family: sans-serif;
 }
 
 /***
@@ -407,7 +407,7 @@ li {
   font-weight: 600;
   background: var(--thm-black);
   overflow: hidden;
-  font-family: var(--thm-font);
+  font-family: "Saira Semi Condensed", sans-serif;
   text-transform: capitalize;
   transition: all 0.5s ease-in-out 0.2s;
   z-index: 1;
@@ -542,7 +542,7 @@ img {
   color: #ffffff;
   font-size: 20px;
   line-height: 56px;
-  font-weight: 700;
+  font-weight: 700 !important;
   text-align: center;
   text-transform: uppercase;
   display: none;
@@ -1647,13 +1647,13 @@ animation: spinner 1s infinite linear;
 .stricky-header .main-menu__list > li > a {
   position: relative;
   color: #ffffff;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 27px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  font-family: var(--thm-font);
+  font-family: "Saira Semi Condensed", sans-serif;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   z-index: 1;
@@ -1663,7 +1663,7 @@ animation: spinner 1s infinite linear;
 .main-menu .main-menu__list > li:hover > a,
 .stricky-header .main-menu__list > li.current > a,
 .stricky-header .main-menu__list > li:hover > a {
-  color: var(--thm-base);
+  color: #f7cd45;
 }
 
 .main-menu .main-menu__list > li.dropdown > a,
@@ -2159,7 +2159,7 @@ Main Header One
 .main-header-one__bottom {
   position: relative;
   display: block;
-  background: #222429;
+  background: #00378d;
   /* margin-top: 3px; */
 }
 
@@ -2250,18 +2250,19 @@ Main Header One
 .main-header-one__bottom-right-btn a {
   position: relative;
   display: inline-block;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
-  background: var(--thm-base);
+  color: var(--thm-base);
+  font-size: 19px !important;
+  font-weight: 700;
+  background: #fff;
   padding: 10px 40px;
   transition: all 200ms linear;
   transition-delay: 0.1s;
+  border-radius: 10px;
 }
 
 .main-header-one__bottom-right-btn a:hover {
-  color: var(--thm-base);
-  background: #ffffff;
+  color: #fff;
+  background: var(--thm-base);
 }
 
 .main-header-one__bottom-right-btn a span:before {
@@ -2280,7 +2281,7 @@ Main Header One
 }
 
 .stricky-header.stricky-header--one .main-menu__wrapper {
-  background: var(--thm-black);
+  background: #00378d;
 }
 
 /***
@@ -4320,6 +4321,7 @@ About One
 
 .about-one__img .inner img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .about-one__content {
@@ -4373,7 +4375,7 @@ About One
 .about-one__content-text2-single ul li .icon-box span:before {
   position: relative;
   display: inline-block;
-  color: var(--thm-base);
+  color: #ff0000;
   font-size: 25px;
   top: 3px;
 }
@@ -4643,7 +4645,7 @@ Portfolio One
 .portfolio-one {
   position: relative;
   display: block;
-  background: var(--thm-black);
+  background: #00378d;
   padding: 60px 0px;
   z-index: 1;
   margin-top: -120px;
@@ -4756,7 +4758,7 @@ Portfolio One
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: var(--thm-font);
+  font-family: "Saira Semi Condensed", sans-serif;
   transition: all 200ms linear;
   transition-delay: 0.1s;
   z-index: 1;
@@ -4771,9 +4773,10 @@ Portfolio One
   position: relative;
   display: inline-block;
   float: right;
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
   top: 5px;
+  font-weight: 600;
 }
 
 .portfolio-one__inner .tabs-content {
@@ -4942,7 +4945,7 @@ Features Two
   left: 0;
   width: 60px;
   height: 60px;
-  background: var(--thm-black);
+  background: #00378d;
   border-radius: 50%;
   z-index: 1;
 }
@@ -4954,7 +4957,7 @@ Features Two
   left: 0;
   bottom: 0;
   right: 0;
-  background: var(--thm-base);
+  background: #ff0000;
   border-radius: 50%;
   transform: scale(0.5);
   opacity: 0;
@@ -6450,7 +6453,7 @@ Footer One
   left: 0;
   bottom: 0;
   right: 0;
-  background: #000000;
+  background: #00378d;
   z-index: -2;
   content: "";
 }
@@ -6477,7 +6480,7 @@ Footer One
 }
 
 .footer-widget__single .title h2 {
-  color: #ffffff;
+  color: #f7cd45;
   font-size: 24px;
   line-height: 34px;
   font-weight: 600;
@@ -6530,7 +6533,8 @@ Footer One
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #17171a;
+  /* background: #17171a; */
+  border: 1px solid #ffffff57;
 }
 
 .footer-widget__single-about .social-link li a::before {
@@ -6556,7 +6560,7 @@ Footer One
 .footer-widget__single-about .social-link li a span::before {
   position: relative;
   display: inline-block;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
   font-size: 15px;
   transition: all 300ms linear;
   transition-delay: 0.1s;
@@ -8246,7 +8250,7 @@ Feature Three
   left: 0;
   bottom: 0;
   right: 0;
-  background: #010007;
+  background: #00378d;
   opacity: 0.7;
   content: "";
   z-index: -2;
@@ -8262,6 +8266,7 @@ Feature Three
   background-position: center center;
   background-repeat: repeat;
   z-index: -1;
+  background: #00378d;
 }
 
 .feature-three__inner {
@@ -8675,7 +8680,7 @@ Testimonial Two
 }
 
 .testimonial-two__single .quote-icon span:before {
-  color: var(--thm-base);
+  color: #ff0000;
   font-size: 50px;
 }
 
@@ -8777,10 +8782,10 @@ Testimonial Two
 }
 
 .testimonial-two__single .client-info .text-box h3 {
-  color: var(--thm-black);
-  font-size: 23px;
+  color: #ff0000;
+  font-size: 19px;
   line-height: 32px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 2px;
 }
 
@@ -14747,18 +14752,18 @@ End Css
 }
 
 .logo-text p {
-  margin: 4px 0 0;
-  font-size: 12px;
-  color: #ffc107;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    margin: 4px 0 0;
+    font-size: 12.8px;
+    color: #f7cd45;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .mobile-nav__content .logo-box img {
   width: 80px;
 }
 .footer-one__bottom-menu p a {
-  color: #d0ad19;
+  color: #f7cd45 ;
 }
 .footer-widget__single-about .logo-box img {
   width: 200px;
@@ -14854,7 +14859,7 @@ End Css
   background-color: rgba(208, 173, 25, 0.1);
   border: 1px solid rgba(208, 173, 25, 0.2);
   border-radius: 50%;
-  color: var(--thm-base);
+  color: #fff;
   font-size: 14px;
   margin-top: 2px;
   transition: all 0.3s ease;
@@ -15090,3 +15095,5 @@ End Css
     height: 80px;
   }
 }
+
+
