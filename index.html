@@ -122,43 +122,128 @@
                           </li>
 
                           <li>
-                            <a href="">About</a>
+                            <a href="about.html">About</a>
                           </li>
 
-                          <li class="dropdown">
-                            <a href="#"> Products </a>
-                            <ul>
-                              <li>
-                                <a href="">Signages</a>
-                              </li>
-                              <li>
-                                <a href="">Name Plates</a>
-                              </li>
-                              <!-- <li>
-                                <a href="">UV Printing</a>
-                              </li> -->
-                              <li>
-                                <a href="">Printing</a>
-                              </li>
-                              <li>
-                                <a href="">Laser Services</a>
-                              </li>
-                              <li>
-                                <a href="">Rubber Stamps & Seals</a>
-                              </li>
-                              <li>
-                                <a href="">Glass & Branding</a>
-                              </li>
-                              <li>
-                                <a href="">Fabrication & Other Products</a>
-                              </li>
-                            </ul>
-                          </li>
+
+
+                          
+
+
+
+
+
+<li class="balaji-products-menu">
+
+    <a href="#" class="balaji-products-toggle">
+        Products
+        <span class="balaji-products-arrow">⌄</span>
+    </a>
+
+    <ul class="balaji-products-dropdown">
+
+        <li>
+            <a href="uv-printing.html">
+                <img src="assets/images/uv-printing-img/Glass UV Printing.png" alt="UV Printing">
+                <span>UV Printing</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="industrial-name-plates.html">
+                <img src="assets/images/Industrial Name Plates/SS Name Boards.png" alt="Industrial Name Plates">
+                <span>Industrial Name Plates</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/safety-sign.png" alt="Safety Sign Board">
+                <span>Safety Sign Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/fire-sign.png" alt="Fire & Emergency Sign Board">
+                <span>Fire & Emergency Sign Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/sign-board.png" alt="Sign Board">
+                <span>Sign Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/wayfinding.png" alt="Wayfinding & EXIT Sign Board">
+                <span>Wayfinding & EXIT Sign Board</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/stickers.png" alt="Industrial Stickers & Labels">
+                <span>Industrial Stickers & Labels</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/safety-tape.png" alt="Safety Tapes & Floor Marking">
+                <span>Safety Tapes & Floor Marking</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/rubber-stamp.png" alt="Rubber Stamps & Seals">
+                <span>Rubber Stamps & Seals</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/printing.png" alt="Printing Services">
+                <span>Printing Services</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/corporate-printing.png" alt="Corporate Printing & Stationery">
+                <span>Corporate Printing & Stationery</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/laser-cutting.png" alt="Laser Cutting & Fabrication">
+                <span>Laser Cutting & Fabrication</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="images/glass-branding.png" alt="Glass & Branding">
+                <span>Glass & Branding</span>
+            </a>
+        </li>
+
+    </ul>
+</li>
+
+
+
+
                           <li>
                             <a href="#">Gallery</a>
                           </li>
                           <li>
-                            <a href="#">Contact</a>
+                            <a href="contact.html">Contact</a>
                           </li>
                         </ul>
                       </div>
@@ -180,6 +265,39 @@
       </header>
       <!--End Main Header One-->
 
+
+
+<script>
+document.addEventListener("click", function (event) {
+
+    var toggle = event.target.closest(".balaji-products-toggle");
+
+    if (!toggle) {
+        return;
+    }
+
+    /* Only tablet + mobile */
+    if (window.innerWidth >= 768 && window.innerWidth <= 991 ||
+        window.innerWidth < 768) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        var menu = toggle.closest(".balaji-products-menu");
+
+        if (!menu) {
+            return;
+        }
+
+        menu.classList.toggle("balaji-open");
+    }
+
+}, true);
+</script>
+
+
+
+
       <div class="stricky-header stricky-header--one stricked-menu main-menu">
         <div class="sticky-header__content"></div>
         <!-- /.sticky-header__content -->
@@ -187,7 +305,7 @@
       <!-- /.stricky-header -->
 
       <section class="banner">
-        <img src="assets/images/banner-balaji4.png" alt="" />
+        <img src="assets/images/banner-balaji3.png" alt="" />
       </section>
 
       <!--Start About One -->
@@ -225,7 +343,7 @@
         class="about-video"
       >
         <source src="assets/images/balaji-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+
       </video>
       </div>
 
@@ -1338,35 +1456,7 @@
       </section> -->
 
 
-<div class="sticky-social">
-  <a href="https://wa.me/919876543210"
-     target="_blank"
-     class="social-icon whatsapp"
-     title="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
 
-  <a href="https://youtube.com/"
-     target="_blank"
-     class="social-icon youtube"
-     title="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
-
-  <a href="https://instagram.com/"
-     target="_blank"
-     class="social-icon instagram"
-     title="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="https://facebook.com/"
-     target="_blank"
-     class="social-icon facebook"
-     title="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-</div>
 
 
 
