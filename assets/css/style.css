@@ -5506,7 +5506,7 @@ Team One
   position: relative;
   display: block;
   background: #ffffff;
-  padding: 120px 0px 90px;
+  padding: 0px 0px 0px;
   z-index: 1;
 }
 
@@ -5542,7 +5542,7 @@ Team One
   transition-timing-function: ease-in-out;
   transition-duration: 0.7s;
   transition-property: all;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
   opacity: 0;
   z-index: 1;
   content: "";
@@ -9921,7 +9921,7 @@ Portfolio Page
   position: relative;
   display: block;
   background: #ffffff;
-  padding: 120px 0px 120px;
+  padding: 90px 0px 20px;
   z-index: 1;
 }
 
@@ -15942,4 +15942,8 @@ End Css
     height: 100%;
     border: 0;
     display: block;
+}
+
+.center {
+  justify-content: center;
 }
