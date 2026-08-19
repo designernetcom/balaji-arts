@@ -10077,7 +10077,7 @@ Portfolio Page
 .portfolio-page__single:hover .portfolio-page__link {
   transform: scale(1);
   opacity: 1;
-  transition-delay: 500ms;
+  transition-delay: 5ms;
 }
 
 .portfolio-page__link a {
@@ -15947,3 +15947,38 @@ End Css
 .center {
   justify-content: center;
 }
+
+
+
+
+.whatsapp-enquiry {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+}
+
+.whatsapp-enquiry a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-enquiry a:hover {
+    background: #128C7E;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.whatsapp-enquiry a i {
+    font-size: 25px;
+    line-height: 1;
+}
+
