@@ -288,7 +288,112 @@
 
 
         <!--Start Portfolio Page-->
-        <section class="portfolio-page">
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const container = document.querySelector(".portfolio-balls");
+
+    if (!container) return;
+
+    const colors = [
+    "#00378d",  // Dark blue
+    "#014aa3",  // Brand blue
+    "#0056b3",  // Medium blue
+    "#00a9b8",  // Cyan
+    "#36c5d5",  // Light cyan
+    "#f4ba00"   // Yellow
+];
+
+    const rows = 12;
+    const columns = 12;
+
+    for (let row = 0; row < rows; row++) {
+
+        for (let col = 0; col < columns; col++) {
+
+            const ball = document.createElement("span");
+
+            ball.classList.add("ball");
+
+            /* Random colour */
+            ball.style.background =
+                colors[Math.floor(Math.random() * colors.length)];
+
+            /*
+             * Spread balls across the COMPLETE
+             * section instead of random empty areas.
+             */
+            const left =
+                (col / columns) * 100 +
+                (Math.random() * 5 - 2.5);
+
+            const top =
+                (row / rows) * 100 +
+                (Math.random() * 6 - 3);
+
+            ball.style.left = left + "%";
+            ball.style.top = top + "%";
+
+            /* Random ball size */
+            const size =
+                Math.random() * 18 + 5;
+
+            ball.style.width = size + "px";
+            ball.style.height = size + "px";
+
+            /* Random opacity */
+ball.style.opacity =
+    (Math.random() * 0.18 + 0.12).toFixed(2);
+
+            container.appendChild(ball);
+
+            /* Random movement */
+            const moveX =
+                Math.random() * 100 - 50;
+
+            const moveY =
+                Math.random() * 100 - 50;
+
+            const scale =
+                Math.random() * 0.7 + 0.7;
+
+            const duration =
+                Math.random() * 5000 + 5000;
+
+            ball.animate(
+                [
+                    {
+                        transform:
+                            "translate3d(0, 0, 0) scale(1)"
+                    },
+                    {
+                        transform:
+                            `translate3d(${moveX}px, ${moveY}px, 0) scale(${scale})`
+                    }
+                ],
+                {
+                    duration: duration,
+
+                    direction: "alternate",
+
+                    iterations: Infinity,
+
+                    easing: "ease-in-out",
+
+                    delay:
+                        Math.random() * -500
+                }
+            );
+        }
+    }
+
+});
+</script>
+
+
+
+<section class="portfolio-page">
+<div class="portfolio-balls" aria-hidden="true"></div>
             <div class="container">
                 <div class="portfolio-page__top">
                     <div class="sec-title">

@@ -309,7 +309,112 @@ document.addEventListener("click", function (event) {
 
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const container = document.querySelector(".portfolio-balls");
+
+    if (!container) return;
+
+    const colors = [
+    "#00378d",  // Dark blue
+    "#014aa3",  // Brand blue
+    "#0056b3",  // Medium blue
+    "#00a9b8",  // Cyan
+    "#36c5d5",  // Light cyan
+    "#f4ba00"   // Yellow
+];
+
+    const rows = 12;
+    const columns = 12;
+
+    for (let row = 0; row < rows; row++) {
+
+        for (let col = 0; col < columns; col++) {
+
+            const ball = document.createElement("span");
+
+            ball.classList.add("ball");
+
+            /* Random colour */
+            ball.style.background =
+                colors[Math.floor(Math.random() * colors.length)];
+
+            /*
+             * Spread balls across the COMPLETE
+             * section instead of random empty areas.
+             */
+            const left =
+                (col / columns) * 100 +
+                (Math.random() * 5 - 2.5);
+
+            const top =
+                (row / rows) * 100 +
+                (Math.random() * 6 - 3);
+
+            ball.style.left = left + "%";
+            ball.style.top = top + "%";
+
+            /* Random ball size */
+            const size =
+                Math.random() * 18 + 5;
+
+            ball.style.width = size + "px";
+            ball.style.height = size + "px";
+
+            /* Random opacity */
+ball.style.opacity =
+    (Math.random() * 0.18 + 0.12).toFixed(2);
+
+            container.appendChild(ball);
+
+            /* Random movement */
+            const moveX =
+                Math.random() * 100 - 50;
+
+            const moveY =
+                Math.random() * 100 - 50;
+
+            const scale =
+                Math.random() * 0.7 + 0.7;
+
+            const duration =
+                Math.random() * 5000 + 5000;
+
+            ball.animate(
+                [
+                    {
+                        transform:
+                            "translate3d(0, 0, 0) scale(1)"
+                    },
+                    {
+                        transform:
+                            `translate3d(${moveX}px, ${moveY}px, 0) scale(${scale})`
+                    }
+                ],
+                {
+                    duration: duration,
+
+                    direction: "alternate",
+
+                    iterations: Infinity,
+
+                    easing: "ease-in-out",
+
+                    delay:
+                        Math.random() * -500
+                }
+            );
+        }
+    }
+
+});
+</script>
+
+
+
 <section class="portfolio-page">
+<div class="portfolio-balls" aria-hidden="true"></div>
             <div class="container">
                 <div class="portfolio-page__top">
                     <div class="sec-title">
@@ -329,11 +434,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Fire Extinguisher Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Fire Extinguisher Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Fire Extinguisher Sign Boards.png" alt="SS Name Plates">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -354,11 +464,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Fire Hose Reel Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Fire Hose Reel Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Fire Hose Reel Sign Boards.png" alt="SS Name Boards">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -379,11 +494,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Fire Hydrant Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Fire Hydrant Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Fire Hydrant Sign Boards.png" alt="Aluminium Name Plates">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -404,11 +524,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Fire Alarm Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Fire Alarm Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Fire Alarm Sign Boards.png" alt="Glass UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -429,11 +554,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Fire Ladder Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Fire Ladder Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Fire Ladder Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -457,11 +587,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Fire Sprinkler Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Fire Sprinkler Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Fire Sprinkler Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -482,11 +617,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Emergency Exit Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Emergency Exit Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Emergency Exit Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -507,11 +647,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Fire Exit Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Fire Exit Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Fire Exit Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -532,11 +677,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Assembly Point Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Assembly Point Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Assembly Point Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -558,11 +708,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'First Aid Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/First Aid Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/First Aid Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -583,11 +738,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Emergency Phone Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Emergency Phone Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Emergency Phone Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -608,11 +768,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Fire Hazard Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Fire Hazard Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Fire Hazard Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -633,11 +798,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'Night Glow / Autoglow Sign Boards',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/Night Glow Autoglow Sign Boards.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/Night Glow Autoglow Sign Boards.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -658,11 +828,16 @@ document.addEventListener("click", function (event) {
                     <div class="col-xl-4 col-lg-4 col-md-6  wow animated fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="portfolio-page__single">
                             <div class="portfolio-page__single-img">
-<div class=" portfolio-page__link whatsapp-enquiry">
-    <a href="https://wa.me/919890929724" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+            <div class="portfolio-page__link whatsapp-enquiry">
+                <a href="javascript:void(0);"
+                   onclick="sendWhatsAppEnquiry(
+                       'LED Exit Sign Board',
+                       'https://yourdomain.com/assets/images/Fire emergency Sign Boards/LED Exit Sign Board.png'
+                   );"
+                   aria-label="Enquire on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
                                 <img src="assets/images/Fire emergency Sign Boards/LED Exit Sign Board.png" alt="Wood UV Printing">
                                 <div class="overlay-content">
                                     <div class="text-box">
@@ -697,7 +872,13 @@ document.addEventListener("click", function (event) {
 </section>
 
 
-
+<div class="ai-image-disclaimer">
+    <span class="ai-disclaimer-icon">ⓘ</span>
+    <p>
+        <strong>AI-Generated Image – For Reference Only :</strong>
+        Actual product may vary in colour, size, material, finish, design and appearance.
+    </p>
+</div>
 
 
 

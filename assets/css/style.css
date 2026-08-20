@@ -50,9 +50,9 @@ body {
   font-family: "Saira Semi Condensed", sans-serif;
 }
 
-body.locked {
+/* body.locked {
   overflow: hidden;
-}
+} */
 
 a {
   color: var(--thm-black);
@@ -12179,9 +12179,11 @@ Contact Page
 }
 
 .contact-page__top-single .content-box p {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 32px;
   font-weight: 400;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .contact-page__top-single .content-box p a {
@@ -14872,6 +14874,7 @@ End Css
 
 .info-item__text {
   flex: 1;
+  margin-bottom: 15px;
 }
 
 .info-item__text p {
@@ -15982,3 +15985,130 @@ End Css
     line-height: 1;
 }
 
+
+
+
+.ai-image-disclaimer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 12px 15px;
+    background: #fff8e1;
+    border: 1px solid #f4ba00;
+    border-left: 4px solid #014aa3;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.ai-disclaimer-icon {
+    flex: 0 0 auto;
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.ai-image-disclaimer p {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.ai-image-disclaimer strong {
+    color: #014aa3;
+    font-weight: 700;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .ai-image-disclaimer {
+        padding: 11px 13px;
+        gap: 8px;
+    }
+
+    .ai-image-disclaimer p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .ai-disclaimer-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .ai-image-disclaimer {
+        padding: 10px 11px;
+        margin-top: 12px;
+        gap: 8px;
+    }
+
+    .ai-image-disclaimer p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .ai-disclaimer-icon {
+        width: 19px;
+        height: 19px;
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================
+   FLOATING BALLS - FULL SECTION
+   ========================================== */
+
+.portfolio-page {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.portfolio-balls {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.portfolio-balls .ball {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    opacity: 0.12;
+
+    filter: blur(1px);
+
+    will-change: transform;
+}
+
+/* Keep all your products above the balls */
+.portfolio-page .container {
+    position: relative;
+    z-index: 2;
+}
