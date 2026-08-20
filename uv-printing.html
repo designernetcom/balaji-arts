@@ -428,7 +428,23 @@ ball.style.opacity =
 </script>
 
 
+<script>
+function sendWhatsAppEnquiry(productName, productImage) {
 
+    var phoneNumber = "919890929724";
+
+    var message =
+        "Hello, I am interested in the following product:%0A%0A" +
+        "Product Name: " + productName + "%0A" +
+        "Product Image: " + productImage + "%0A%0A" +
+        "Please share more details and pricing.";
+
+    var whatsappURL =
+        "https://wa.me/" + phoneNumber + "?text=" + message;
+
+    window.open(whatsappURL, "_blank");
+}
+</script>
 
 
 
